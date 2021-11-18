@@ -19,7 +19,11 @@ interface Content {
   portfolio: DataType<string>
 }
 
-axios.defaults.baseURL = 'http://localhost:8000';
+type Mode = 'dev' | unknown;
+
+const mode: Mode = 'prod';
+
+axios.defaults.baseURL = mode === 'dev' ? 'http://localhost:8000' : 'https://chingqaq.github.io/site';
 
 const state = reactive<State>({
   store: {

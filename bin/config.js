@@ -1,7 +1,7 @@
 const { resolve } = require('./util');
 const config = {
 	base: {
-		documentTitle: 'website title',
+		documentTitle: 'AionChiu',
 		entryPath: resolve('src'),
 		publicPath: './',
 		resolveExtensions: [
@@ -14,8 +14,8 @@ const config = {
 		ImagesOutputPath: resolve('__example__', 'images')
 	},
 	prod: {
-		outputPath: resolve('dist'),
-		ImagesOutputPath: resolve('dist', 'images')
+		outputPath: resolve('site'),
+    ImagesOutputPath: resolve('site', 'images')
 	}
 };
 
