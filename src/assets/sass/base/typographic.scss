@@ -1,0 +1,32 @@
+﻿@each $name, $style in $font {
+  .#{$name} {
+    @each $prop, $value in $style {
+      #{$prop}: $value;
+    }
+  }
+}
+
+.text-company {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: underline;
+  @include space(margin, y, 12px);
+  @include space(margin, right, 12px);
+}
+
+.headline--blank {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 6px;
+    right: -18px;
+    background-image: url('../images/i-window.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    content: '';
+    @include size(18px);
+  }
+}

@@ -1,0 +1,218 @@
+@use 'sass:math';
+$grid-config: (
+  'data': (
+    'lg': (
+      'breakpoint': 'min-width: 1281px',
+      'container-max-width': 1280px,
+      'container-padding': 36px,
+      'column': 12,
+      'gutter': 24px
+    ),
+    'md': (
+      'breakpoint': 'min-width: 768px',
+      'container-max-width': 1024px,
+      'container-padding': 20px,
+      'gutter': 24px,
+      'column': 12
+    ),
+    'sm': (
+      'breakpoint': 'min-width: 320px',
+      'column': 4,
+      'container-max-width': 100%,
+      'container-padding': 16px,
+      'gutter': 16px
+    )
+  )
+);
+
+@function get-max-column($length: length($config)) {
+  $max-column: 0;
+  @for $i from 1 through $length {
+    $column: map-get(map-get($config, nth(map-keys($config), $i)), 'column');
+    $max-column: max($max-column, $column);
+  }
+  @return $max-column;
+}
+
+@function min-or-max-width($config) {
+  $min-length: 0;
+  $max-length: 0;
+  @each $key, $value in $config {
+    @if (str-index(map-get($value, 'breakpoint'), 'min') == 1 and str-index(map-get($value, 'breakpoint'), 'min') != null) {
+      $min-length: $min-length + 1;
+    }
+    @if (str-index(map-get($value, 'breakpoint'), 'max') == 1 and str-index(map-get($value, 'breakpoint'), 'max') != null) {
+      $max-length: $max-length + 1;
+    }
+  }
+  @if ($min-length > $max-length) {
+    @return 'min';
+  }
+  @if ($min-length < $max-length) {
+    @return 'max';
+  }
+  @if ($min-length == $max-length) {
+    @warn 'min與max數量相等，請確認規格';
+    @return 'null';
+  }
+}
+
+@function config-order($data) {
+  $breakpoint-unit: min-or-max-width($data);
+  @if $breakpoint-unit != 'null' {
+    @if $breakpoint-unit == 'min' {
+      @return map-reverse($data);
+    } @else if $breakpoint-unit == 'max' {
+      @return $data;
+    }
+  } @else if $breakpoint-unit == 'null' {
+    @warn '無法判別breakpoints產生順序';
+  }
+}
+
+@mixin make-container-ready() {
+  box-sizing: border-box;
+  @include space(margin, x, auto);
+}
+
+@mixin make-container() {
+  @each $breakpoint-syntax, $breakpoint-value in $config {
+    @if map-has-key($breakpoint-value, 'container-max-width') {
+      $gutter: map-get($breakpoint-value, 'container-padding');
+      @include breakpoint(#{map-get($breakpoint-value, 'breakpoint')}) {
+        max-width: calc(#{map-get($breakpoint-value, 'container-max-width')} + (#{$gutter} * 2));
+        @include space(padding, x, #{$gutter});
+      }
+    }
+  }
+}
+
+@mixin make-row-ready() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin make-row() {
+  @each $breakpoint-syntax, $breakpoint-value in $config {
+    @if map-has-key($breakpoint-value, 'container-max-width') {
+      $column-gutter: value-config($config, $breakpoint-syntax, 'gutter');
+      @include breakpoint(map-get($breakpoint-value, 'breakpoint')) {
+        @include space(margin, x, math.div($column-gutter, 2) * -1);
+      }
+    }
+  }
+}
+
+@mixin make-grid-column() {
+  $column-total: get-max-column();
+
+  @for $i from 1 through $column-total {
+    .col-#{$i} {
+      flex: 0 0 (math.div($i * 100%, $column-total));
+      max-width: math.div($i * 100%, $column-total);
+    }
+  }
+
+  @each $breakpoint-syntax, $breakpoint-value in $config {
+    $syntax: $breakpoint-syntax;
+    $breakpoint: value-config($config, $syntax, 'breakpoint');
+    $column: value-config($config, $syntax, 'column');
+    $gutter: value-config($config, $syntax, 'gutter');
+    @include breakpoint($breakpoint) {
+      @for $i from 1 through $column {
+        .col-#{$syntax}-#{$i} {
+          flex: 0 0 (math.div($i * 100%, $column));
+          max-width: math.div($i * 100%, $column);
+        }
+      }
+
+      [class*='col'] {
+        @include space(padding, x, math.div($gutter, 2));
+      }
+    }
+  }
+}
+
+@mixin make-grid-push() {
+  $column-total: get-max-column();
+  @for $i from 1 through $column-total {
+    .push-#{$i} {
+      margin-left: math.div($i * 100%, $column-total);
+    }
+  }
+
+  @each $breakpoint-syntax, $breakpoint-value in $config {
+    $syntax: $breakpoint-syntax;
+    $breakpoint: value-config($config, $syntax, 'breakpoint');
+    $column: value-config($config, $syntax, 'column');
+    $gutter: value-config($config, $syntax, 'gutter');
+    @include breakpoint($breakpoint) {
+      @for $i from 1 through $column {
+        .push-#{$syntax}-#{$i} {
+          margin-left: math.div($i * 100%, $column);
+        }
+      }
+    }
+  }
+}
+
+@mixin make-grid-order() {
+  $column-total: get-max-column();
+  @for $i from 1 through $column-total {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $breakpoint-syntax, $breakpoint-value in $config {
+    $syntax: $breakpoint-syntax;
+    $breakpoint: value-config($config, $syntax, 'breakpoint');
+    $column: value-config($config, $syntax, 'column');
+    $gutter: value-config($config, $syntax, 'gutter');
+    @include breakpoint($breakpoint) {
+      @for $i from 1 through $column {
+        .order-#{$syntax}-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+}
+
+$config: config-order(value-config($grid-config, 'data'));
+
+.container {
+  @include make-container-ready();
+  @include make-container();
+
+  &--fluid {
+    width: 100%;
+  }
+}
+
+.row {
+  @include make-row-ready();
+  @include make-row();
+
+  > * {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  > .br {
+    width: 100%;
+  }
+
+  &--shrink {
+    @include space(margin, x, 0 !important);
+  }
+}
+
+.col {
+  flex: 1 0 0;
+  max-width: 100%;
+}
+
+@include make-grid-column();
+@include make-grid-push();
+@include make-grid-order();

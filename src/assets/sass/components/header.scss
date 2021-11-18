@@ -1,0 +1,19 @@
+﻿/** postcss-bem-linter: define header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: rgba(var(--global-header-bg-color), 1);
+  @include size(100%, 40px);
+  @include space(padding, x, var(--global-container-boundary-size, 16px));
+  @include breakpoint($breakpoint-md) {
+    height: 60px;
+  }
+}

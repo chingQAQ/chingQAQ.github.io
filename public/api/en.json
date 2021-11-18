@@ -1,0 +1,103 @@
+﻿{
+  "about": {
+    "presentation": {
+      "description": "Hi I'm Chiu as a Frontend and User experience architect at isobar. 5 years of developer experience. Focus on user experience and interactive.\n\nI enjoy turning complex abstract things into simple and possible. When I'm not coding, I'll exercise, watch movie, jogging, or making coffee.",
+      "photo": "https://via.placeholder.com/500"
+    },
+    "experience": [
+      {
+        "time": "2019 - now",
+        "title": "Frontend & User experience architect",
+        "company": "isobar",
+        "url": "https://www.isobar.com/zh-tw",
+        "achieve": [
+          "Expand the development cycle to research and design.",
+          "Regular sharing of front-end knowledge, and professional consult, ensure the team implements development and troubleshooting successfully.",
+          "Optimize and integrate automation tools with the team, and add the build system or module bundler to enhance the development experience of engineers.",
+          "Develop the company's private grid system, share the research and application of related knowledge and technology, and assist designers in creating user interfaces that meet visual needs.",
+          "Import Gitlab milestones to perform management, enhance the collaboration process to complete the project scope and requirements."
+        ]
+      },
+      {
+        "time": "2017 - 2019",
+        "title": "Frontend developer",
+        "company": "Creatidea",
+        "url": "https://web.creatidea.com.tw",
+        "achieve": [
+          "Optimize the workflow, use the framework to create prototypes quickly, assist the team focus on demand for the customer, and understand specifications.",
+          "Promote a culture of regular sharing by the department, improve the team’s technical capabilities.",
+          "Encapsulation module, used on development of new and old projects。",
+          "Import CSS framework, design, and develop the official website."
+        ]
+      }
+    ]
+  },
+  "portfolio": [
+    {
+      "name": "TOEIC",
+      "description": "#Website",
+      "url": "https://www.toeic.com.tw/",
+      "image": "../images/toeic"
+    },
+    {
+      "name": "EVA Air",
+      "description": "#Website",
+      "url": "https://www.evaair.com/zh-tw/index.html",
+      "image": "../images/eva"
+    },
+    {
+      "name": "Honda",
+      "description": "#Campaign",
+      "url": "https://fit.honda.tw/",
+      "image": "../images/honda-fit"
+    },
+    {
+      "name": "dentsu",
+      "description": "#Website #Campaign",
+      "url": "",
+      "image": "../images/den"
+    },
+    {
+      "name": "Amway",
+      "description": "#Campaign",
+      "url": "https://www.amway.com.tw/amway40/",
+      "image": "../images/amway"
+    },
+    {
+      "name": "isobar line CNY",
+      "description": "#Social",
+      "url": "",
+      "image": "../images/isobar"
+    },
+    {
+      "name": "Porsche",
+      "description": "#Campaign",
+      "url": "",
+      "image": "../images/porsche"
+    },
+    {
+      "name": "Continental Development Corporation",
+      "description": "#Website",
+      "url": "https://www.continental-propertydevelopment.com/zh/",
+      "image": "../images/cdc"
+    },
+    {
+      "name": "Taichung World Flora Exposition",
+      "description": "#Website",
+      "url": "",
+      "image": "../images/expo"
+    },
+    {
+      "name": "FHTrust",
+      "description": "#Website #Campaign #other",
+      "url": "",
+      "image": "../images/fh"
+    },
+    {
+      "name": "1010",
+      "description": "#Social",
+      "url": "",
+      "image": "../images/1010"
+    }
+  ]
+}

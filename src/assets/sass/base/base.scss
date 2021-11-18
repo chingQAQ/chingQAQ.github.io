@@ -1,0 +1,65 @@
+:root {
+  --global-container-boundary-size: 36px;
+  --global-container-distance-size-sm: 40px;
+  --global-container-distance-size-md: 60px;
+  --global-container-distance-size-lg: 120px;
+  --global-primary-color: rgb(38, 38, 38);
+  --global-second-color: rgb(19, 142, 170);
+  --global-footer-color: rgb(58, 58, 58);
+  --global-header-bg-color: 255, 255, 255;
+
+  @include breakpoint($breakpoint-sm) {
+    --global-container-boundary-size: 16px;
+  };
+
+  @include breakpoint($breakpoint-md) {
+    --global-container-boundary-size: 20px;
+  };
+}
+
+* {
+  word-wrap: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
+  outline: none;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+html,
+body {
+	color: var(--global-primary-color);
+	font-weight: 400;
+	font-size: 12px;
+  min-height: 100vh;
+	font-family: $font-family;
+	line-height: inherit;
+	touch-action: manipulation;
+  background-color: #fbfbfb;
+}
+
+picture {
+  display: block;
+  line-height: 0;
+}
+
+#app {
+  min-height: inherit;
+}
+
+main {
+  @include space(padding, top, 40px);
+  @include breakpoint($breakpoint-md) {
+    @include space(padding, top, 60px);
+  }
+}
+
+a {
+  color: inherit;
+}

@@ -1,0 +1,99 @@
+﻿/* postcss-bem-linter: define navigation */
+.navigation {
+  @include breakpoint('max-width: 767px') {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    @include size(100vw, 100vh);
+
+    &--mb-open {
+      display: block;
+    }
+  }
+
+  &__wrapper {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    background-color: rgba(var(--global-header-bg-color), 0.9);
+
+    @include breakpoint('max-width: 767px') {
+      flex-direction: column;
+      @include size(100%);
+      @include space(padding, top, 60px);
+    }
+  }
+
+  &__item {
+    @include breakpoint('max-width: 767px') {
+      width: 100%;
+      text-align: center;
+      @include space(margin, right, 0);
+      @include space(padding, y, 12px);
+    }
+
+    &:not(:last-child) {
+      @include space(margin, right, 16px);
+    }
+  }
+
+  &__link {
+    color: var(--global-primary-color);
+
+    /* postcss-bem-linter: ignore */
+    [class$='--active'] & {
+      color: var(--global-second-color);
+    }
+  }
+
+  &__link[target='_blank'] {
+    position: relative;
+    display: inline-block;
+    @include space(padding, right, 15px);
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      background-image: url('../images/i-window.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% auto;
+      content: '';
+      @include size(12px);
+    }
+  }
+}
+
+.navigation-toggle {
+  position: relative;
+  z-index: 11;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @include size(36px, 24px);
+  @include breakpoint($breakpoint-md) {
+    display: none;
+  }
+
+  &__line {
+    display: block;
+    height: 4px;
+    background-color: var(--global-primary-color);
+    transition-duration: 0.3s;
+    transition-property: width;
+
+    .navigation-toggle--active & {
+      width: 100%;
+    }
+  }
+
+  @for $i from 1 to 4 {
+    &__line:nth-child(#{$i}) {
+      width: calc(100% - ($i * 15%));
+    }
+  }
+}

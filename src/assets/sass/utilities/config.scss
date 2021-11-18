@@ -1,0 +1,51 @@
+$converter-unit: px !default;
+$scale-root: 320 !default;
+
+$color: (
+  'white': #fff,
+);
+
+$breakpoint: (
+  'sm': 'min-width: 320px',
+  'md': 'min-width: 768px',
+  'lg': 'min-width: 1281px'
+);
+
+$font: (
+  'headline-1': (
+    'font-size': 72px,
+    'line-height': 84px,
+    'font-weight': 500,
+    'letter-spacing': 2px
+  ),
+  'headline-2': (
+    'font-size': 48px,
+    'line-height': 56px,
+    'font-weight': 500,
+    'letter-spacing': 1.2px
+  ),
+  'headline-3': (
+    'font-size': 24px,
+    'line-height': 28px,
+    'font-weight': 400,
+    'letter-spacing': 1px
+  ),
+  'text-24': (
+    'font-size': 24px,
+    'line-height': 28px,
+    'font-weight': 400,
+    'letter-spacing': 0.9px
+  ),
+  'text-16': (
+    'font-size': 16px,
+    'line-height': 19px,
+    'font-weight': 400,
+    'letter-spacing': 0.8px
+  ),
+  'text-12': (
+    'font-size': 12px,
+    'line-height': 14px,
+    'font-weight': 400,
+    'letter-spacing': 0.7px
+  ),
+);

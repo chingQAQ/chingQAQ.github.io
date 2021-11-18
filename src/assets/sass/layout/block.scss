@@ -1,0 +1,16 @@
+﻿/** postcss-bem-linter: define aion-block */
+.aion-block {
+  @include space(padding, top, var(--global-container-distance-size-sm));
+
+  @include breakpoint($breakpoint-md) {
+    @include space(padding, top, var(--global-container-distance-size-md));
+  }
+
+  @include breakpoint($breakpoint-lg) {
+    @include space(padding, top, var(--global-container-distance-size-lg));
+  }
+
+  &__top-level {
+    @include space(padding, top, 0);
+  }
+}

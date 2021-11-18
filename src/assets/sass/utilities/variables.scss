@@ -1,0 +1,7 @@
+$color-white: value-config($color, 'white');
+
+$breakpoint-sm: value-config($breakpoint, 'sm');
+$breakpoint-md: value-config($breakpoint, 'md');
+$breakpoint-lg: value-config($breakpoint, 'lg');
+
+$font-family: Roboto, 'Open Sans', sans-serif;
