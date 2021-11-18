@@ -37,67 +37,67 @@
       "name": "TOEIC",
       "description": "#Website",
       "url": "https://www.toeic.com.tw/",
-      "image": "../images/toeic"
+      "image": "./images/toeic"
     },
     {
       "name": "EVA Air",
       "description": "#Website",
       "url": "https://www.evaair.com/zh-tw/index.html",
-      "image": "../images/eva"
+      "image": "./images/eva"
     },
     {
       "name": "Honda",
       "description": "#Campaign",
       "url": "https://fit.honda.tw/",
-      "image": "../images/honda-fit"
+      "image": "./images/honda-fit"
     },
     {
       "name": "dentsu",
       "description": "#Website #Campaign",
       "url": "",
-      "image": "../images/den"
+      "image": "./images/den"
     },
     {
       "name": "Amway",
       "description": "#Campaign",
       "url": "https://www.amway.com.tw/amway40/",
-      "image": "../images/amway"
+      "image": "./images/amway"
     },
     {
       "name": "isobar line CNY",
       "description": "#Social",
       "url": "",
-      "image": "../images/isobar"
+      "image": "./images/isobar"
     },
     {
       "name": "Porsche",
       "description": "#Campaign",
       "url": "",
-      "image": "../images/porsche"
+      "image": "./images/porsche"
     },
     {
       "name": "Continental Development Corporation",
       "description": "#Website",
       "url": "https://www.continental-propertydevelopment.com/zh/",
-      "image": "../images/cdc"
+      "image": "./images/cdc"
     },
     {
       "name": "Taichung World Flora Exposition",
       "description": "#Website",
       "url": "",
-      "image": "../images/expo"
+      "image": "./images/expo"
     },
     {
       "name": "FHTrust",
       "description": "#Website #Campaign #other",
       "url": "",
-      "image": "../images/fh"
+      "image": "./images/fh"
     },
     {
       "name": "1010",
       "description": "#Social",
       "url": "",
-      "image": "../images/1010"
+      "image": "./images/1010"
     }
   ]
 }
