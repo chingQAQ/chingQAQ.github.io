@@ -11,6 +11,7 @@ const webpackProdConfig = {
 	},
 	output: {
 		path: prod.outputPath,
+    publicPath: prod.publicPath,
 		filename: pathData => `${pathData.contentHashType === 'javascript' ? 'js' : ''}/[name].js`
 	},
 	optimization: {
