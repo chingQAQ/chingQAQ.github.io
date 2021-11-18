@@ -14,7 +14,6 @@ const config = {
 		ImagesOutputPath: resolve('__example__', 'images')
 	},
 	prod: {
-    publicPath: './site',
 		outputPath: resolve('site'),
     ImagesOutputPath: resolve('site', 'images')
 	}
