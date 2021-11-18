@@ -55,7 +55,7 @@ const htmlMetas = [
 	{
 		attributes: {
 			name: 'description',
-			content: ''
+      content: 'Hi I\'m Chiu as a Frontend and User experience architect at isobar. 5 years of developer experience.Focus on user experience and interactive.'
 		}
 	},
 	{
@@ -67,13 +67,13 @@ const htmlMetas = [
 	{
 		attributes: {
 			name: 'og:title',
-			content: ''
+      content: 'AionChiu\'s site'
 		}
 	},
 	{
 		attributes: {
 			name: 'og:description',
-			content: ''
+      content: 'Hi I\'m Chiu as a Frontend and User experience architect at isobar. 5 years of developer experience.Focus on user experience and interactive.'
 		}
 	},
 	{
