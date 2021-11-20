@@ -3,6 +3,7 @@
   import CardList from '@/components/CardList.vue';
   import AboutContent from '@/components/AboutContent.vue';
   import type { State } from '@/store';
+  import { setSrcSet } from '../util';
 
   const state = inject('state') as State;
 </script>
@@ -10,10 +11,12 @@
 <template>
   <about-content>
     <template #rightContent>
-      <picture v-if="state.store.about.presentation">
-        <source :srcset="state.store.about.presentation.photo">
-        <img class="content__photo">
-      </picture>
+      <div class="hero">
+        <picture v-if="state.store.about.presentation">
+          <source :srcset="setSrcSet(state.store.about.presentation.photo)">
+          <img class="content__photo">
+        </picture>
+      </div>
     </template>
   </about-content>
   <about-content title="Experience">

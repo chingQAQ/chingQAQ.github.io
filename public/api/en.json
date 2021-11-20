@@ -1,8 +1,8 @@
 ﻿{
   "about": {
     "presentation": {
-      "description": "Hi I'm Chiu as a Frontend and User experience architect at isobar. 5 years of developer experience. Focus on user experience and interaction.\n\nI enjoy turning complex things into simple and possible. When I'm not coding, I'll exercise, watch movies, jogging, or make coffee.",
-      "photo": "https://via.placeholder.com/500"
+      "description": "Hi I'm Chiu as a Frontend and User experience architect at isobar. 5+ years of experience in developing, especially focus on user experience and interactive, writing excellent layout at responsive web, using web markup flexible, quick to resolve problems at cross-browser and platform.",
+      "photo": "./images/hero"
     },
     "experience": [
       {
@@ -11,11 +11,11 @@
         "company": "isobar",
         "url": "https://www.isobar.com/zh-tw",
         "achieve": [
-          "Expand the development cycle to research and design.",
-          "Regular sharing of front-end knowledge, and professional consult, ensure the team implements development and troubleshooting successfully.",
-          "Optimize and integrate automation tools with the team, and add the build system or module bundler to enhance the development experience of engineers.",
+          "Expand the development flow into research and design.",
+          "Sharing development knowledge and professional consult as front-end, ensure team perform and troubleshooting.",
+          "Develop the private grid system and integrate build system into automation tool with team member, improving efficiency of engineers.",
           "Develop the company's private grid system, share the research and application of related knowledge and technology, and assist designers in creating user interfaces that meet visual needs.",
-          "Import Gitlab milestones to perform management, enhance the collaboration process to complete the project scope and requirements."
+          "Using Gitlab milestones, make sure collaboration and defined function what project needs."
         ]
       },
       {
@@ -24,10 +24,9 @@
         "company": "Creatidea",
         "url": "https://web.creatidea.com.tw",
         "achieve": [
-          "Optimize the workflow, use the framework to create prototypes quickly, assist the team focus on demand for the customer, and understand specifications.",
-          "Promote a culture of regular sharing by the department, improve the team’s technical capabilities.",
-          "Encapsulation module, used on development of new and old projects。",
-          "Import CSS framework, design, and develop the official website."
+          "Optimize workflow, using framework to create demo site quickly, assist team to focus on demand for the customer then understanding specifications.",
+          "Promote sharing, improving ability of the department.",
+          "Import CSS framework, design and develop the official website."
         ]
       }
     ]

@@ -43,6 +43,31 @@
     @include size(100%);
   }
 
+  :slotted(.hero) {
+    width: 100%;
+    aspect-ratio: 1/1;
+    @supports not(aspect-ratio: auto) {
+      position: relative;
+      height: 0;
+      line-height: 0;
+      @include space(padding, top, 100%);
+    }
+
+    picture {
+      @supports not(aspect-ratio: auto) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        object-position: center;
+        object-fit: cover;
+        @include size(100%);
+      }
+    }
+  }
+
   .content {
     white-space: break-spaces;
 

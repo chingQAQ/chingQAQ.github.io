@@ -1,5 +1,6 @@
 ﻿<script lang="ts" setup>
   import { defineProps, toRefs } from 'vue';
+  import { setSrcSet } from '../util';
 
   interface CardListData {
     [name: string]: string;
@@ -14,7 +15,6 @@
   const { data, grid } = toRefs(props);
   const convertColumnsToLayout = (x: any) => x.value.map((y: any) => `col-${y.breakpoint}-${Math.floor(y.max / y.span)}`);
   const girdPattern = convertColumnsToLayout(grid);
-  const setSrcSet = (url: string) => `${url}.png, ${url}@2x.png 2x, ${url}@3x.png 3x`;
 
 </script>
 
@@ -103,10 +103,6 @@
         object-fit: cover;
         object-position: center;
         @include size(100%);
-        @supports not(aspect-ratio: auto) {
-          position: absolute;
-          height: auto;
-        }
       }
     }
 
@@ -140,6 +136,15 @@
         transition-property: width;
         @include size(0, 1px);
       }
+    }
+  }
+
+  @supports not(aspect-ratio: auto) {
+    picture {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 </style>

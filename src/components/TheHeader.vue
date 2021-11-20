@@ -59,7 +59,7 @@
         </li>
         <li class="navigation__item">
           <a
-            href="www.linkedin.com/in/aion-chiu"
+            href="https://www.linkedin.com/in/aion-chiu"
             target="_blank"
             class="navigation__link text-16"
           >
