@@ -61,7 +61,7 @@ const htmlMetas = [
 	{
 		attributes: {
 			name: 'image',
-			content: 'path/'
+      content: './images/og.png'
 		}
 	},
 	{
@@ -85,7 +85,7 @@ const htmlMetas = [
 	{
 		attributes: {
 			name: 'og:image',
-			content: 'path/'
+			content: './images/og.png'
 		}
 	},
 	{

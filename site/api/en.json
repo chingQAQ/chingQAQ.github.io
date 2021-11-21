@@ -1,7 +1,7 @@
 ﻿{
   "about": {
     "presentation": {
-      "description": "Hi I'm Chiu as a Frontend and User experience architect.\n5+ years of experience in developing, especially focus on user experience and interactive, writing excellent layout at responsive web, using web markup flexible, quick to resolve problems at cross-browser and platform.",
+      "description": "Hi I'm Chiu as a Frontend and User Experience architect.\n5+ years of experience in developing, especially focus on user experience and interactive, writing excellent layout at responsive web, using web markup flexible, quick to resolve problems at cross-browser and platform.",
       "photo": "./images/hero"
     },
     "experience": [
@@ -13,7 +13,7 @@
         "achieve": [
           "Expand the development flow into research and design.",
           "Sharing development knowledge and professional consult as front-end, ensure team perform and troubleshooting.",
-          "Develop the private grid system and integrate build system into automation tool with team member, improving efficiency of engineers.",
+          "Develop the private grid system and integrate the build system into automation tool with team member, improving efficiency of engineers.",
           "Develop the company's private grid system, share the research and application of related knowledge and technology, and assist designers in creating user interfaces that meet visual needs.",
           "Using Gitlab milestones, make sure collaboration and defined function what project needs."
         ]
