@@ -1,7 +1,7 @@
 ﻿{
   "about": {
     "presentation": {
-      "description": "Hi I'm Chiu as a Frontend and User Experience architect.\n5+ years of experience in developing, especially focus on user experience and interactive, writing excellent layout at responsive web, using web markup flexible, quick to resolve problems at cross-browser and platform.",
+      "description": "Hi I'm Chiu as a Frontend and User Experience architect.\n5+ years of experience in developing, specializing in the field of interactive and user experience. Utilize structured approach to implement an excellent layout and program the hight efficient motion in projects.\nApart from expertise in web developing, I can deal with application, web-server, and resolve lots of platform problems as well which builds up cross-functional collaboration.",
       "photo": "./images/hero"
     },
     "experience": [
@@ -11,11 +11,10 @@
         "company": "isobar",
         "url": "https://www.isobar.com/zh-tw",
         "achieve": [
-          "Expand the development flow into research and design.",
-          "Sharing development knowledge and professional consult as front-end, ensure team perform and troubleshooting.",
-          "Develop the private grid system and integrate the build system into automation tool with team member, improving efficiency of engineers.",
-          "Develop the company's private grid system, share the research and application of related knowledge and technology, and assist designers in creating user interfaces that meet visual needs.",
-          "Using Gitlab milestones, make sure collaboration and defined function what project needs."
+          "Expanded the development flow into research and design.",
+          "Introduced development knowledge and professional consult as front-end, ensured team perform and troubleshoot.",
+          "Developed the private grid system and integrated the build system into automation tool with team member, improved efficiency of engineers.",
+          "Enabled the Gitlab milestones, make sure collaboration and define function in project."
         ]
       },
       {
@@ -24,9 +23,9 @@
         "company": "Creatidea",
         "url": "https://web.creatidea.com.tw",
         "achieve": [
-          "Optimize workflow, using framework to create demo site quickly, assist team to focus on demand for the customer then understanding specifications.",
-          "Promote sharing, improving ability of the department.",
-          "Import CSS framework, design and develop the official website."
+          "Optimized workflow, facilitated the framework into project, built the demo quickly.",
+          "Advocated the share culture, improved ability of the department.",
+          "Enabled CSS framework, devised and develop the official website."
         ]
       }
     ]
